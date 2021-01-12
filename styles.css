@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.card__container {
+  height: 70rem;
+  width: 70rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px; /* changes the prespective of its child that is the main card element */
+}
+.card__body {
+  transform-style: preserve-3d; /* Using this we can push out the content to give it a 3d look via z axis */
+  height: 50rem;
+  width: 30rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  border-radius: 2rem;
+  box-shadow: 0rem 2rem 2rem rgba(0, 0, 0, 0.5),
+    0rem 0rem 2rem rgba(0, 0, 0, 0.5);
+}
+.card__image {
+  display: flex;
+  justify-content: center;
+}
+.card__image > img {
+  height: 10rem;
+  z-index: 2;
+  transition: all 5000ms ease-out;
+}
+.card__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card__info > h1 {
+  letter-spacing: 0.5rem;
+  font-weight: 700;
+}
+.card__info > p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  word-spacing: 1.2rem;
+}
